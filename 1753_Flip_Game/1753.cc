@@ -46,7 +46,10 @@ int main(void) {
 		getchar();
 	}
 	dfs(0, 0);
-	printf("%d", ans);
+	if(ans == 0x7f7f7f7f)
+		printf("Impossible");
+	else
+		printf("%d", ans);
 	return 0;
 }
 
@@ -59,4 +62,5 @@ wwwb
 2139062143
 修改：
 check()函数检查的是调用者的结果，放到最前面，仍然WA
+如果不可能就输出“Impossible”
 */ 
